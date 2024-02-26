@@ -18,7 +18,7 @@ steps {
 sh "mvn -version";
 sh "cd $workspace";sh "cp -rp $workspace/InsuranceManagement/* $workspace";
  sh "ls -lrt";
-sh "mvn clean install"
+sh "mvn clean package"
 }
 }
 }

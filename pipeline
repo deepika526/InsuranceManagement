@@ -1,0 +1,16 @@
+pipeline {
+agent any
+stages {
+stage(‘clean workspace’)  {
+steps {
+ cleanWs()
+}
+stage(‘checkout scm’)  {
+steps {
+ sh “git clone https://github.com/deepika526/InsuranceManagement.git”
+}
+
+}
+}
+
+}

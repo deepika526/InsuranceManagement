@@ -14,8 +14,9 @@ steps {
 }
 stage('build the project')  {
 steps {
+sh "cd $workspace";sh "pwd";sh "ls -lrt"
 sh "mvn -version";
- sh "mvn clean install"
+ //sh "mvn clean install"
 }
 }
 }

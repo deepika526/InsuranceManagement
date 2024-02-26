@@ -1,13 +1,13 @@
 pipeline {
 agent any
 stages {
-stage(‘clean workspace’)  {
+stage('clean workspace')  {
 steps {
 sh "git --version"
  cleanWs()
 }
 
-stage(‘checkout scm’)  {
+stage('checkout scm')  {
 steps {
  sh “git clone https://github.com/deepika526/InsuranceManagement.git”
 }

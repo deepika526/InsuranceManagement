@@ -14,9 +14,11 @@ steps {
 }
 stage('build the project')  {
 steps {
-sh "cd $workspace";sh "pwd";sh "ls -lrt"
+//sh "cd $workspace";sh "pwd";sh "ls -lrt"
 sh "mvn -version";
- //sh "mvn clean install"
+sh "cd $workspace";sh "cp -rp $workspace/InsuranceManagement/* $workspace";
+ sh "ls -lrt";
+sh "mvn clean install"
 }
 }
 }

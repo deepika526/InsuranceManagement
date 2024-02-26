@@ -11,7 +11,12 @@ stage('checkout scm')  {
 steps {
  sh "git clone https://github.com/deepika526/InsuranceManagement.git"
 }
-
+stage('build the project')  {
+steps {
+sh "mvn -version";
+ sh "mvn clean install"
+}
+}
 }
 
  
